@@ -1,0 +1,375 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D03ED152075744F00E72BC5 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D03ED142075744F00E72BC5 /* History.swift */; };
+		1DFA9BDF20768EA40023AC4D /* ArcBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFA9BDC20768EA40023AC4D /* ArcBall.swift */; };
+		1DFA9BE020768EA40023AC4D /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFA9BDD20768EA40023AC4D /* Renderer.swift */; };
+		1DFA9BE120768EA40023AC4D /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 1DFA9BDE20768EA40023AC4D /* Shaders.metal */; };
+		1DFA9BE320768EAF0023AC4D /* AAPLTransforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFA9BE220768EAF0023AC4D /* AAPLTransforms.swift */; };
+		1DFA9BE72076A2820023AC4D /* ColorMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFA9BE62076A2810023AC4D /* ColorMap.swift */; };
+		EF7009141C3ED07100E75ECF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7009131C3ED07100E75ECF /* AppDelegate.swift */; };
+		EF7009161C3ED07100E75ECF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7009151C3ED07100E75ECF /* ViewController.swift */; };
+		EF7009191C3ED07100E75ECF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF7009171C3ED07100E75ECF /* Main.storyboard */; };
+		EF70091B1C3ED07100E75ECF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF70091A1C3ED07100E75ECF /* Assets.xcassets */; };
+		EF70091E1C3ED07100E75ECF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF70091C1C3ED07100E75ECF /* LaunchScreen.storyboard */; };
+		EF70092A1C3EDFB900E75ECF /* TempiAudioInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7009291C3EDFB900E75ECF /* TempiAudioInput.swift */; };
+		EF7916BE1C50AA9700658A2C /* SpectralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7916BD1C50AA9700658A2C /* SpectralView.swift */; };
+		EFAC3F461C406DC5002CD63F /* TempiUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAC3F451C406DC5002CD63F /* TempiUtilities.swift */; };
+		EFAC3F481C45C719002CD63F /* TempiFFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAC3F471C45C719002CD63F /* TempiFFT.swift */; };
+		EFAC3F4E1C4D7B76002CD63F /* TempiDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAC3F4D1C4D7B76002CD63F /* TempiDebug.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D03ED142075744F00E72BC5 /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		1DFA9BDB20768EA30023AC4D /* Shaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shaders.h; sourceTree = "<group>"; };
+		1DFA9BDC20768EA40023AC4D /* ArcBall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcBall.swift; sourceTree = "<group>"; };
+		1DFA9BDD20768EA40023AC4D /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		1DFA9BDE20768EA40023AC4D /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		1DFA9BE220768EAF0023AC4D /* AAPLTransforms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AAPLTransforms.swift; sourceTree = "<group>"; };
+		1DFA9BE62076A2810023AC4D /* ColorMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorMap.swift; sourceTree = "<group>"; };
+		EF7009101C3ED07100E75ECF /* FFT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF7009131C3ED07100E75ECF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF7009151C3ED07100E75ECF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF7009181C3ED07100E75ECF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF70091A1C3ED07100E75ECF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF70091D1C3ED07100E75ECF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF70091F1C3ED07100E75ECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF7009291C3EDFB900E75ECF /* TempiAudioInput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempiAudioInput.swift; sourceTree = "<group>"; };
+		EF7916BD1C50AA9700658A2C /* SpectralView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpectralView.swift; sourceTree = "<group>"; };
+		EFAC3F451C406DC5002CD63F /* TempiUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempiUtilities.swift; sourceTree = "<group>"; };
+		EFAC3F471C45C719002CD63F /* TempiFFT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempiFFT.swift; sourceTree = "<group>"; };
+		EFAC3F4D1C4D7B76002CD63F /* TempiDebug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempiDebug.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF70090D1C3ED07100E75ECF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF7009071C3ED07100E75ECF = {
+			isa = PBXGroup;
+			children = (
+				EF7009121C3ED07100E75ECF /* TempiFFT */,
+				EF7009111C3ED07100E75ECF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF7009111C3ED07100E75ECF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF7009101C3ED07100E75ECF /* FFT.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF7009121C3ED07100E75ECF /* TempiFFT */ = {
+			isa = PBXGroup;
+			children = (
+				EF7916BD1C50AA9700658A2C /* SpectralView.swift */,
+				1D03ED142075744F00E72BC5 /* History.swift */,
+				EF7009151C3ED07100E75ECF /* ViewController.swift */,
+				1DFA9BDC20768EA40023AC4D /* ArcBall.swift */,
+				1DFA9BDD20768EA40023AC4D /* Renderer.swift */,
+				1DFA9BDB20768EA30023AC4D /* Shaders.h */,
+				1DFA9BDE20768EA40023AC4D /* Shaders.metal */,
+				1DFA9BE220768EAF0023AC4D /* AAPLTransforms.swift */,
+				1DFA9BE62076A2810023AC4D /* ColorMap.swift */,
+				EF7009291C3EDFB900E75ECF /* TempiAudioInput.swift */,
+				EFAC3F471C45C719002CD63F /* TempiFFT.swift */,
+				EFAC3F451C406DC5002CD63F /* TempiUtilities.swift */,
+				EFAC3F4D1C4D7B76002CD63F /* TempiDebug.swift */,
+				EF7009171C3ED07100E75ECF /* Main.storyboard */,
+				EF7009131C3ED07100E75ECF /* AppDelegate.swift */,
+				EF70091A1C3ED07100E75ECF /* Assets.xcassets */,
+				EF70091C1C3ED07100E75ECF /* LaunchScreen.storyboard */,
+				EF70091F1C3ED07100E75ECF /* Info.plist */,
+			);
+			path = TempiFFT;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF70090F1C3ED07100E75ECF /* FFT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF7009221C3ED07100E75ECF /* Build configuration list for PBXNativeTarget "FFT" */;
+			buildPhases = (
+				EF70090C1C3ED07100E75ECF /* Sources */,
+				EF70090D1C3ED07100E75ECF /* Frameworks */,
+				EF70090E1C3ED07100E75ECF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FFT;
+			productName = TempiHarness;
+			productReference = EF7009101C3ED07100E75ECF /* FFT.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF7009081C3ED07100E75ECF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "John Scalo";
+				TargetAttributes = {
+					EF70090F1C3ED07100E75ECF = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 7237X7VY2S;
+						LastSwiftMigration = 0930;
+					};
+				};
+			};
+			buildConfigurationList = EF70090B1C3ED07100E75ECF /* Build configuration list for PBXProject "FFT" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF7009071C3ED07100E75ECF;
+			productRefGroup = EF7009111C3ED07100E75ECF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF70090F1C3ED07100E75ECF /* FFT */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF70090E1C3ED07100E75ECF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF70091E1C3ED07100E75ECF /* LaunchScreen.storyboard in Resources */,
+				EF70091B1C3ED07100E75ECF /* Assets.xcassets in Resources */,
+				EF7009191C3ED07100E75ECF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF70090C1C3ED07100E75ECF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DFA9BE120768EA40023AC4D /* Shaders.metal in Sources */,
+				EF7916BE1C50AA9700658A2C /* SpectralView.swift in Sources */,
+				1DFA9BE72076A2820023AC4D /* ColorMap.swift in Sources */,
+				1DFA9BDF20768EA40023AC4D /* ArcBall.swift in Sources */,
+				EFAC3F4E1C4D7B76002CD63F /* TempiDebug.swift in Sources */,
+				EF7009161C3ED07100E75ECF /* ViewController.swift in Sources */,
+				1DFA9BE020768EA40023AC4D /* Renderer.swift in Sources */,
+				EF70092A1C3EDFB900E75ECF /* TempiAudioInput.swift in Sources */,
+				EFAC3F461C406DC5002CD63F /* TempiUtilities.swift in Sources */,
+				EFAC3F481C45C719002CD63F /* TempiFFT.swift in Sources */,
+				1D03ED152075744F00E72BC5 /* History.swift in Sources */,
+				EF7009141C3ED07100E75ECF /* AppDelegate.swift in Sources */,
+				1DFA9BE320768EAF0023AC4D /* AAPLTransforms.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EF7009171C3ED07100E75ECF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF7009181C3ED07100E75ECF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF70091C1C3ED07100E75ECF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF70091D1C3ED07100E75ECF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF7009201C3ED07100E75ECF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = TempiFFT/Shaders.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF7009211C3ED07100E75ECF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = TempiFFT/Shaders.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF7009231C3ED07100E75ECF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7237X7VY2S;
+				INFOPLIST_FILE = TempiFFT/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Harry.com.FFT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = TempiFFT/Shaders.h;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		EF7009241C3ED07100E75ECF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 7237X7VY2S;
+				INFOPLIST_FILE = TempiFFT/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Harry.com.FFT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = TempiFFT/Shaders.h;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF70090B1C3ED07100E75ECF /* Build configuration list for PBXProject "FFT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF7009201C3ED07100E75ECF /* Debug */,
+				EF7009211C3ED07100E75ECF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF7009221C3ED07100E75ECF /* Build configuration list for PBXNativeTarget "FFT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF7009231C3ED07100E75ECF /* Debug */,
+				EF7009241C3ED07100E75ECF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF7009081C3ED07100E75ECF /* Project object */;
+}
