@@ -78,7 +78,7 @@ class ViewController: UIViewController {
     
     //MARK: -
     
-    var startTranslation = float3()
+    var startTranslation = simd_float3()
     var startRotation = CGPoint()
     
     func parseTranslation(_ pt:CGPoint) {

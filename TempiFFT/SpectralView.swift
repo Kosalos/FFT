@@ -77,6 +77,5 @@ class SpectralView: UIView {
         context.move(to: CGPoint(x:x, y:0))
         context.addLine(to: CGPoint(x:x, y:viewHeight))
         context.strokePath()
-
     }
 }

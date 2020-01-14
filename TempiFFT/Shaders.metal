@@ -5,13 +5,13 @@
 using namespace metal;
 
 struct Transfer {
-    float4 position [[position]];
-    float4 color;
+    simd_float4 position [[position]];
+    simd_float4 color;
 };
 
 vertex Transfer texturedVertexShader
 (
- device TVertex* vData [[ buffer(0) ]],
+ constant TVertex* vData [[ buffer(0) ]],
  constant ConstantData& constantData [[ buffer(1) ]],
  unsigned int vid [[ vertex_id ]])
 {
@@ -19,12 +19,12 @@ vertex Transfer texturedVertexShader
     TVertex v = vData[vid];
     
     out.color = v.color;
-    out.position = constantData.mvp * float4(v.pos, 1.0);
+    out.position = constantData.mvp * simd_float4(v.pos, 1.0);
     
     return out;
 }
 
-fragment float4 texturedFragmentShader
+fragment simd_float4 texturedFragmentShader
 (
  Transfer data [[stage_in]],
  texture2d<float> tex2D [[texture(0)]],

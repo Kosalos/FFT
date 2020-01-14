@@ -15,9 +15,9 @@ var constants: [MTLBuffer] = []
 var constantsSize: Int = MemoryLayout<ConstantData>.stride
 var constantsIndex: Int = 0
 let kInFlightCommandBuffers = 3
-var translation = float3(19.5229, 20.9382, 71.0523)
+var translation = simd_float3(19.5229, 20.9382, 71.0523)
 
-var lightpos:float3 = float3()
+var lightpos:simd_float3 = simd_float3()
 var lAngle:Float = 0
 
 class Renderer: NSObject, MTKViewDelegate {

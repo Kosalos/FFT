@@ -17,7 +17,7 @@ class History {
     var vData = Array<TVertex>()    // vertices
     var iDataL = Array<UInt16>()    // indices of line segments
     var iDataT = Array<UInt16>()    // indices of triangles
-    var color:float4 = float4(1,1,1,1)
+    var color:simd_float4 = simd_float4(1,1,1,1)
     var drawStyle:UInt8 = 1
     var meshStyle:Int = 0
     
@@ -25,38 +25,44 @@ class History {
     }
     
     var pace:Int = 0
+    var isBusy:Bool = false
     
     func addHistory() {
+
         if isTouched { return }
         pace += 1
         if pace < 2 { return }
         pace = 0
         
+        if isBusy { return }
+        isBusy = true
+
         var index:Int = 0
         for _ in 0 ..< height-1 {
             for _ in 0 ..< width {
-                vData[index].pos.z = vData[index + width].pos.z
-                vData[index].color = vData[index + width].color
+                let v = vData[index + width]
+                vData[index].pos.z = v.pos.z // vData[index + width].pos.z
+                vData[index].color = v.color //simd_float4(0.3,0.4,0.5,1) //vData[index + width].color
                 index += 1
             }
         }
-        
+
         for i in 0 ..< width {
             let dIndex = i + baseIndex
             vData[index].pos.z = Float(smoothData[dIndex]) * yScale
-            
-            var cIndex:Int = Int(  powf(fabs(Float(smoothData[dIndex])),1 + colorScale) )
-            //if cIndex > 255  { cIndex = 255 }
+
+            var cIndex:Int = Int(  powf(abs(Float(smoothData[dIndex])),1 + colorScale) )
             cIndex = cIndex % 256
-            let cc:float3 = colorMap[255 - cIndex]
-            
+            let cc:simd_float3 = colorMap[255 - cIndex]
+
             vData[index].color.x = cc.x
             vData[index].color.y = cc.y
             vData[index].color.z = cc.z
             index += 1
         }
-        
+
         vBuffer?.contents().copyMemory(from: &vData, byteCount:vData.count  * MemoryLayout<TVertex>.stride)
+        isBusy = false
     }
     
     func setScale(_ ratio:Float) { yScale = 0.01 + ratio * 0.5 }
@@ -89,7 +95,7 @@ class History {
                 v.txt.y = Float(1) - Float(y) / Float(height)
                 
                 v.drawStyle = drawStyle
-                v.color = float4(0,0,0,1)
+                v.color = simd_float4(0,0,0,1)
                 
                 vData.append(v)
             }

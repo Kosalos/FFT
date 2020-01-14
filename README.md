@@ -1,4 +1,7 @@
 # FFT
+
+update Jan 14,2020:  Xcode 11.3.1,  Swift 5
+
 realtime FFT of audio input, for iPad using Swift and Metal
 
 Based on FFT and Audio Input code written by John Scalo \
