@@ -214,7 +214,7 @@ class TempiAudioInput: NSObject {
         assert(osErr == noErr, "*** AudioUnitSetProperty err \(osErr)")
         
         // Set up our callback.
-        var inputCallbackStruct = AURenderCallbackStruct(inputProc: recordingCallback, inputProcRefCon: UnsafeMutableRawPointer(Unmanaged.passUnretained(self).toOpaque()))
+        var inputCallbackStruct = AURenderCallbackStruct(inputProc: recordingCallback, inputProcRefCon: UnsafeMutableRawPointer(Unmanaged.passRetained(self).toOpaque()))
         osErr = AudioUnitSetProperty(audioUnit,
             AudioUnitPropertyID(kAudioOutputUnitProperty_SetInputCallback),
             AudioUnitScope(kAudioUnitScope_Global),
